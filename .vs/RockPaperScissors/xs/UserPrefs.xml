@@ -1,13 +1,12 @@
 ﻿<Properties StartupConfiguration="{2F5DE007-F526-458D-8DE8-45872CB20B2D}|Default">
   <MonoDevelop.Ide.ItemProperties.RockPaperScissors PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RockPaperScissors/UserGestures.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RockPaperScissors/Human Player.cs">
     <Files>
       <File FileName="RockPaperScissors/Program.cs" Line="9" Column="37" />
-      <File FileName="RockPaperScissors/UserGestures.cs" Line="17" Column="12" />
+      <File FileName="RockPaperScissors/UserGestures.cs" Line="7" Column="20" />
       <File FileName="RockPaperScissors/PlayerClass.cs" Line="1" Column="1" />
-      <File FileName="RockPaperScissors/Human Player.cs" Line="1" Column="1" />
-      <File FileName="RockPaperScissors/AnimalClass.cs" Line="1" Column="1" />
-      <File FileName="RockPaperScissors/CPU Player.cs" Line="1" Column="1" />
+      <File FileName="RockPaperScissors/Human Player.cs" Line="36" Column="2" />
+      <File FileName="RockPaperScissors/CPU Player.cs" Line="13" Column="1" />
       <File FileName="RockPaperScissors/GameClass.cs" Line="6" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
