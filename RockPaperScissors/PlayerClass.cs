@@ -3,19 +3,22 @@ namespace RockPaperScissors
 {
     public class PlayerClass
     {
-        public Human_Player Player1;
-        public CPU_Player Player2;
+
+        public Human Player1;
+        public Human Player2;
+
 
         string playerName;
+
+
 
 
         //Constructors
 
         public PlayerClass()
         {
-            public Human_Player Player1 = new Human_Player();
-            radio = new Radio("620 AM")
-        }
+            Player1 = new Human();
+        }  
 
         //Member Functions (Can Do)
 
@@ -24,6 +27,13 @@ namespace RockPaperScissors
             this.playerName = playerName;
         }
 
-        public void ThrowGesture(int ThrowGesture)
+        public void ThrowGestureHuman(MainMenu()){
+            Console.WriteLine("You threw " + MainMenu());
+        }
+
+        public void ThrowGestureComputer(MainMenu())
+        {
+        Console.WriteLine("Computer throws " + MainMenu());
+        }
     }
 }
