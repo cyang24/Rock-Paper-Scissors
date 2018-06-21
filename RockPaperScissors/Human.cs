@@ -1,20 +1,28 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace RockPaperScissors
 {
     public class Human : PlayerClass
     {
         //member variables
 
+     
 
         //Constructor 
 
-        public Human()
+        public Human(string playerName)
+            :base(playerName)
         {
-            this.playerName = "Player1";
+            this.playerName = playerName;
+
         }
+
+
 
         //member methods
 
+        public void MainMenu(List<string> gestures);
 
     }
 }
