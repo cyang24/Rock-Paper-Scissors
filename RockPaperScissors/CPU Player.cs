@@ -5,21 +5,35 @@ namespace RockPaperScissors
     {
         //member variables
 
-
-        string cpu_Name;
-        string playerRace;
-        string playerPlanet;
+        string cpuName;
+        string cpuRace;
+        string cpuPlanet;
 
 
         //Constructor 
 
-        public Human_Player()
+        public CPU_Player()
         {
-            this.cpu_Name = "Lord Dorl";
-            this.playerRace = "alien";
-            this.playerPlanet = "Mars";
+            cpuName = "Big Boss";
+            cpuRace = "Alien";
+            cpuPlanet = "Mars";
         }
 
         //member methods
+
+        public void SetCpuName(string cpuName)
+        {
+            this.cpuName = cpuName;
+        }
+
+        public void SetCpuRace(string cpuRace)
+        {
+            this.cpuRace = cpuRace;
+        }
+
+        public void SetCpuPlanet(string cpuPlanet)
+        {
+            this.cpuPlanet = cpuPlanet;
+        }
     }
 }

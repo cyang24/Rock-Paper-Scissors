@@ -1,41 +1,21 @@
 ﻿using System;
 namespace RockPaperScissors
 {
-    public class Human_Player
+    public class Human_Player : PlayerClass
     {
 
         //member variables
 
-        string playerName;
-        string playerRace;
-        string playerPlanet;
-
-
+       
         //Constructor 
 
-        public Human_Player()
+        public Human_Player(string playerName)
         {
-            playerName = "playerName";
-            playerRace = "human";
-            playerPlanet = "Earth";
+            this.playerName = "playerName";
         }
 
         //member methods
 
-        public void SetPLayerName(string playerName) 
-        {
-            this.playerName = playerName;
-        }
-
-        public void SetPlayerRace(string playerRace)
-        {
-            this.playerRace = playerRace;
-        }
-
-        public void SetPlayerPlanet(string playerPlanet)
-        {
-            this.playerPlanet = playerPlanet;
-        }
     }
 }
 
