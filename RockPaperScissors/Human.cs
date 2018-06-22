@@ -11,18 +11,20 @@ namespace RockPaperScissors
 
         //Constructor 
 
-        public Human(string playerName)
-            :base(playerName)
+        public Human()
         {
-            this.playerName = playerName;
-
+            SetPLayerName();
         }
 
+        public void SetPLayerName()
+        {
+            Console.WriteLine("What is your Player Name?");
+            this.playerName = Console.ReadLine();
+        }
 
 
         //member methods
 
-        public void MainMenu(List<string> gestures);
 
     }
 }

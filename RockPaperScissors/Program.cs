@@ -7,7 +7,8 @@ namespace RockPaperScissors
     {
         public static void Main(string[] args)
         {
-           
+            GameClass NewGame = new GameClass();
+            NewGame.NumberOfPlayers();
         }
     }
 }

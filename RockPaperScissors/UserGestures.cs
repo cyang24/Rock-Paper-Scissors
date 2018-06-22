@@ -6,8 +6,6 @@ namespace RockPaperScissors
     public class UserGestures
     {
 
-        //Member Functions (Can Do)
-
         public UserGestures()
         {
             List<string> gestures = new List<string>();
@@ -18,8 +16,4 @@ namespace RockPaperScissors
             gestures.Add("spock");
         }
     }
-
-
-
-
 }

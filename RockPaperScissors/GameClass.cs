@@ -11,44 +11,53 @@ namespace RockPaperScissors
         public Human Human;
         public Computer Computer;
         public string playerSelectionInput;
-        bool playerTurn = true;
+        bool playerTurn;
 
         // constructor
 
 
 
-        public GameClass() //RUNS GAME
-        {   
+        //public GameClass() //RUNS GAME
+        //{
+            
+        //}
 
-        
+        //public void  RunGame()
+        //{
+            
+        //NumberOfPlayers();
 
-        }
 
+        //}
 
-        public NumberOfPlayers (string NumberOfPlayers)
+        public void  NumberOfPlayers()
         {
             Console.WriteLine("How many players are playing today?");
             playerSelectionInput = int.Parse(Console.ReadLine());
 
-
-            if (playerSelectionInput = int 1 )
+            if (playerSelectionInput = 1)
             {
                 Human player1 = new Human();
                 Computer computer = new Computer();
             }
-            else {playerSelectionInput => 2)
+
+            else if (playerSelectionInput = 2)
             {
                 Human player1 = new Human();
-                Human player2 = new Computer();
-            }
+                Human player2 = new Human();
 
-        public void Player1Turn ()
-        
-                if (bool playerTurn = false) {
-                
-
-                }
-
+           }
         }
+
+
+        //public void Player1Turn ()
+          
+             //Player1
+            
+                
+                
+            
+
+       
     }
 }

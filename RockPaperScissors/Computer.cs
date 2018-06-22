@@ -7,8 +7,9 @@ namespace RockPaperScissors
     {
         public Computer()
         {
-            this.playerName = "Computer";
-
+            playerName = "Computer";
         }
+
+        //public void MainMenu(List<string> gestures);
     }
 }
