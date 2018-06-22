@@ -8,8 +8,9 @@ namespace RockPaperScissors
         public Computer()
         {
             playerName = "Computer";
+
         }
 
-        //public void MainMenu(List<string> gestures);
+
     }
 }
