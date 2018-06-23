@@ -1,6 +1,0 @@
-/Users/chouyouyang/Desktop/DevCodeCamp/Projects/RockPaperScissors/RockPaperScissors/obj/x86/Debug/RockPaperScissors.csprojResolveAssemblyReference.cache
-/Users/chouyouyang/Desktop/DevCodeCamp/Projects/RockPaperScissors/RockPaperScissors/obj/x86/Debug/RockPaperScissors.csproj.CoreCompileInputs.cache
-/Users/chouyouyang/Desktop/DevCodeCamp/Projects/RockPaperScissors/RockPaperScissors/bin/Debug/RockPaperScissors.exe
-/Users/chouyouyang/Desktop/DevCodeCamp/Projects/RockPaperScissors/RockPaperScissors/bin/Debug/RockPaperScissors.pdb
-/Users/chouyouyang/Desktop/DevCodeCamp/Projects/RockPaperScissors/RockPaperScissors/obj/x86/Debug/RockPaperScissors.exe
-/Users/chouyouyang/Desktop/DevCodeCamp/Projects/RockPaperScissors/RockPaperScissors/obj/x86/Debug/RockPaperScissors.pdb
