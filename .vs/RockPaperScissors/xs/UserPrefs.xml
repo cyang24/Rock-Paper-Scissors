@@ -2,11 +2,11 @@
   <MonoDevelop.Ide.ItemProperties.RockPaperScissors PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="RockPaperScissors/GameClass.cs">
     <Files>
-      <File FileName="RockPaperScissors/GameClass.cs" Line="177" Column="59" />
-      <File FileName="RockPaperScissors/PlayerClass.cs" Line="44" Column="10" />
-      <File FileName="RockPaperScissors/UserGestures.cs" Line="24" Column="18" />
-      <File FileName="RockPaperScissors/Human.cs" Line="8" Column="25" />
-      <File FileName="RockPaperScissors/Computer.cs" Line="8" Column="9" />
+      <File FileName="RockPaperScissors/GameClass.cs" Line="177" Column="50" />
+      <File FileName="RockPaperScissors/PlayerClass.cs" Line="47" Column="41" />
+      <File FileName="RockPaperScissors/UserGestures.cs" Line="16" Column="9" />
+      <File FileName="RockPaperScissors/Human.cs" Line="11" Column="33" />
+      <File FileName="RockPaperScissors/Computer.cs" Line="7" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
