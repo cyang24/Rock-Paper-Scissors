@@ -28,19 +28,24 @@ namespace RockPaperScissors
             switch (userInput)
             {
                 case "a":
-                    Console.WriteLine(gestures[0] + " was chosen");
+                    Console.WriteLine(gestures[0]);
+                    userInput = gestures[0];
                     break;
                 case "b":
-                    Console.WriteLine(gestures[1] + " was chosen");
+                    Console.WriteLine(gestures[1]);
+                    userInput = gestures[1];
                     break;
                 case "c":
-                    Console.WriteLine(gestures[2] + " was chosen");
+                    Console.WriteLine(gestures[2]);
+                    userInput = gestures[2];
                     break;
                 case "d":
-                    Console.WriteLine(gestures[3] + " was chosen");
+                    Console.WriteLine(gestures[3]);
+                    userInput = gestures[3];
                     break;
                 case "e":
-                    Console.WriteLine(gestures[4] + " was chosen");
+                    Console.WriteLine(gestures[4]);
+                    userInput = gestures[4];
                     break;
                 default:
                     Console.WriteLine("Invalid Entry Try Again.");

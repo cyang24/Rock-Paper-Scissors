@@ -5,12 +5,6 @@ namespace RockPaperScissors
 {
     public class Computer : PlayerClass
     {
-        public Computer()
-        {
-            playerName = "Computer";
-
-        }
-
-
+  
     }
 }
