@@ -13,8 +13,8 @@ namespace RockPaperScissors
         public string player1GestureInput;
         public string player2GestureInput;
         public string gestureInput;
-        public bool playerWin = false;
-        public bool playerTies;
+        public bool playerWin;
+        public bool playAgain = true;
        
         // NumberOfPlayers
 
@@ -66,115 +66,150 @@ namespace RockPaperScissors
         {   
             player1.MainMenu();
             player1GestureInput = player1.GetGestureInput();
-            player1.GetGestureInput();
+            //player1.GetGestureInput();
         }
 
         public void Player2Turn()
         {   
             player2.MainMenu();
             player2GestureInput = player2.GetGestureInput();
-            player2.GetGestureInput();
+            //player2.GetGestureInput();
         }
 
         //Game Results
 
         public void GesturesConditions(string player1GestureInput, string player2GestureInput)
         {
-            if (player1GestureInput == "rock" && player2GestureInput == "scissors")
+            if (player1GestureInput == player2GestureInput)
             {
-                playerWin = true;
+                Console.WriteLine("It's a Tie No Winners!");
             }
-            else if (player1GestureInput == "scissors" && player2GestureInput == "paper")
-            {
-                playerWin = true;
+
+            else{
+                
+                if (player1GestureInput == "rock" && player2GestureInput == "scissors")
+                {
+                    playerWin = true;
+                }
+                else if (player1GestureInput == "scissors" && player2GestureInput == "paper")
+                {
+                    playerWin = true;
+                }
+                else if (player1GestureInput == "paper" && player2GestureInput == "rock")
+                {
+                    playerWin = true;
+                }
+                else if (player1GestureInput == "rock" && player2GestureInput == "lizard")
+                {
+                    playerWin = true;
+                }
+                else if (player1GestureInput == "lizard" && player2GestureInput == "Spock")
+                {
+                    playerWin = true;
+                }
+                else if (player1GestureInput == "Spock" && player2GestureInput == "scissors")
+                {
+                    playerWin = true;
+                }
+                else if (player1GestureInput == "scissors" && player2GestureInput == "lizard")
+                {
+                    playerWin = true;
+                }
+                else if (player1GestureInput == "lizard" && player2GestureInput == "paper")
+                {
+                    playerWin = true;
+                }
+                else if (player1GestureInput == "paper" && player2GestureInput == "Spock")
+                {
+                    playerWin = true;
+                }
+                else if (player1GestureInput == "Spock" && player2GestureInput == "rock")
+                {
+                    playerWin = true;
+                }
+                else
+                {
+                    playerWin = false;
+                }
+
+                BattleResults();
+            
             }
-            else if (player1GestureInput == "paper" && player2GestureInput == "rock")
+        }
+
+        public void BattleResults()
+        {
+            if (playerWin == true)
             {
-                playerWin = true;
-            }
-            else if (player1GestureInput == "rock" && player2GestureInput == "lizard")
-            {
-                playerWin = true;
-            }
-            else if (player1GestureInput == "lizard" && player2GestureInput == "Spock")
-            {
-                playerWin = true;
-            }
-            else if (player1GestureInput == "Spock" && player2GestureInput == "scissors")
-            {
-                playerWin = true;
-            }
-            else if (player1GestureInput == "lizard" && player2GestureInput == "paper")
-            {
-                playerWin = true;
-            }
-            else if (player1GestureInput == "paper" && player2GestureInput == "Spock")
-            {
-                playerWin = true;
-            }
-            else if (player1GestureInput == "Spock" && player2GestureInput == "rock")
-            {
-                playerWin = true;
-            }
-           
-            if (playerWin)
-            {
-                player2.SetPlayerScore(player2.playerScore =+1);
-                Console.WriteLine("Geat Win! " + player2.GetPlayerName());
-            }
-            else if (playerWin == true)
-            {
-                player1.SetPlayerScore(player1.playerScore =+1);
+                player1.SetPlayerScore(player1.playerScore += 1);
                 Console.WriteLine("Geat Win! " + player1.GetPlayerName());
             }
-            else
+            else if (playerWin == false)
             {
-                Console.WriteLine("It's a Tie! No Winner");
+                player2.SetPlayerScore(player2.playerScore += 1);
+                Console.WriteLine("Geat Win! " + player2.GetPlayerName());
             }
-
+            else if (playerWin == true && playerWin == false)
+            {
+              Console.WriteLine("It's a Tie! No Winners");
+            }
         }
-           
-            // Runs Game
+
+
+        //Play Again
+        public void PlayAgain()
+        {
+            do
+            {
+                Console.WriteLine("\n");
+                Console.WriteLine("Play Again? Y or N");
+                string userChoice = Console.ReadLine().ToUpper();
+                RunGame();
+
+            } 
+            while (Console.ReadLine() == "Y");
+        }
+
+        // Runs Game
 
         public void RunGame()
-            {  
-                
-                Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard or Spock \nFirst player to 3 wins, takes the victory \nLet's Begin");
-                Console.WriteLine("\n");    
-                NumberOfPlayers();
+        {
+
+            Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard or Spock \nFirst player to 3 wins, takes the victory \nLet's Begin");
+            Console.WriteLine("\n");
+            NumberOfPlayers();
+            Console.WriteLine("\n");
+
+            do
+            {
+                Console.WriteLine("Your turn " + player1.GetPlayerName());
+                Player1Turn();
+                Console.WriteLine("\n");
+                Console.WriteLine("Your turn " + player2.GetPlayerName());
+                Player2Turn();
+                Console.WriteLine("\n");
+                GesturesConditions(player1GestureInput, player2GestureInput);
                 Console.WriteLine("\n");
 
-                do
-                {
+                Console.WriteLine("Current Score " + player1.GetPlayerName() + " is " + player1.GetPlayerScore());
+                Console.WriteLine("Current Score " + player2.GetPlayerName() + " is " + player2.GetPlayerScore());
+                Console.WriteLine("\n");
 
-
-                Console.WriteLine("Your turn " + player1.GetPlayerName());
-                    Player1Turn();
-                    Console.WriteLine("\n");
-                    Console.WriteLine("Your turn " + player2.GetPlayerName());
-                    Player2Turn();
-                    GesturesConditions(player1GestureInput, player2GestureInput);
-                    Console.WriteLine("\n");
-                   
-                    Console.WriteLine("Current Score " + player1.GetPlayerName() + " is " + player1.GetPlayerScore());
-                    Console.WriteLine("Current Score " + player2.GetPlayerName() + " is " + player2.GetPlayerScore());
-                    Console.WriteLine("\n");
-
-                } 
-                
-                while (player1.GetPlayerScore() < 3 && player2.GetPlayerScore() < 3);
-
-                if (player1.GetPlayerScore() == 3)
-                {
-                    Console.WriteLine(player1.GetPlayerName() + " takes the set!! Great Win");
-                }
-                else if (player2.GetPlayerScore() == 3)
-                {
-                    Console.WriteLine(player2.GetPlayerName() + " takes the set!! Great Win");
-
-                }
-                
-                Console.ReadLine();
             }
+
+            while (player1.GetPlayerScore() < 3 && player2.GetPlayerScore() < 3);
+
+            if (player1.GetPlayerScore() == 3)
+            {
+                Console.WriteLine(player1.GetPlayerName() + " takes the set!! Great Win!");
+            }
+            else if (player2.GetPlayerScore() == 3)
+            {
+                Console.WriteLine(player2.GetPlayerName() + " takes the set!! Great Win!");
+
+            }
+
+            PlayAgain();
+        }
     }
 }

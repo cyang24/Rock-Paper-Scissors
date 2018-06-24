@@ -5,13 +5,9 @@ namespace RockPaperScissors
 {
     public abstract class PlayerClass
     {
-        //Member Variables
-
         public string playerName;
         public double playerScore;
         public string gestureInput;
-
-        //Can Do's
 
         public void SetPlayerName(string playerName)
         {
@@ -48,23 +44,23 @@ namespace RockPaperScissors
             switch (gestureInput)
             {
                 case "1":
-                    Console.WriteLine("You chose " + gestures[0]);
+                    Console.WriteLine( playerName + " chose " + gestures[0]);
                     gestureInput = gestures[0];
                     break;
                 case "2":
-                    Console.WriteLine("You chose " + gestures[1]);
+                    Console.WriteLine(playerName + " chose " + gestures[1]);
                     gestureInput = gestures[1];
                     break;
                 case "3":
-                    Console.WriteLine("You chose " + gestures[2]);
+                    Console.WriteLine(playerName + " chose " + gestures[2]);
                     gestureInput = gestures[2];
                     break;
                 case "4":
-                    Console.WriteLine("You chose " + gestures[3]);
+                    Console.WriteLine(playerName + " chose " + gestures[3]);
                     gestureInput = gestures[3];
                     break;
                 case "5":
-                    Console.WriteLine("You chose " + gestures[4]);
+                    Console.WriteLine(playerName + " chose "+ gestures[4]);
                     gestureInput = gestures[4];
                     break;
                 default:

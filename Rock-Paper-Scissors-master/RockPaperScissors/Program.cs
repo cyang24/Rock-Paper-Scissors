@@ -9,12 +9,7 @@ namespace RockPaperScissors
         {
             GameClass NewGame = new GameClass(); 
             NewGame.RunGame();
-
-         
-
-
-          
-
+            Console.ReadLine();
         }
     }
 }
