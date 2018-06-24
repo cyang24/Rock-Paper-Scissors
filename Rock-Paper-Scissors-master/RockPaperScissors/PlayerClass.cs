@@ -10,7 +10,7 @@ namespace RockPaperScissors
         public string playerName;
         public double playerScore;
         public string gestureInput;
-        UserGestures human;
+
         //Can Do's
 
         public void SetPlayerName(string playerName)
@@ -32,13 +32,55 @@ namespace RockPaperScissors
             return playerScore;
         }
 
-        public void GetGestureInput(string gestureInput)
+       
+        public virtual void MainMenu()
         {
-            this.gestureInput = gestureInput;
+            List<string> gestures = new List<string>();
+            gestures.Add("rock");
+            gestures.Add("paper");
+            gestures.Add("scissors");
+            gestures.Add("lizard");
+            gestures.Add("Spock");
+        
+            Console.WriteLine("Please choose \n1) rock \n2) paper \n3) scissors \n4) spock  \n5) lizard");
+            gestureInput = Console.ReadLine();
+
+            switch (gestureInput)
+            {
+                case "1":
+                    Console.WriteLine("You chose " + gestures[0]);
+                    gestureInput = gestures[0];
+                    break;
+                case "2":
+                    Console.WriteLine("You chose " + gestures[1]);
+                    gestureInput = gestures[1];
+                    break;
+                case "3":
+                    Console.WriteLine("You chose " + gestures[2]);
+                    gestureInput = gestures[2];
+                    break;
+                case "4":
+                    Console.WriteLine("You chose " + gestures[3]);
+                    gestureInput = gestures[3];
+                    break;
+                case "5":
+                    Console.WriteLine("You chose " + gestures[4]);
+                    gestureInput = gestures[4];
+                    break;
+                default:
+                    Console.WriteLine("Invalid Entry Try Again.");
+                    MainMenu();
+                    break;
+            }
         }
+
         public string GetGestureInput()
         {
             return gestureInput;
         }
+
+
+
     }
+
   }  

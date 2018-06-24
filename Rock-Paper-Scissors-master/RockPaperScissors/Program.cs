@@ -7,8 +7,11 @@ namespace RockPaperScissors
     {
         public static void Main(string[] args)
         {
-            GameClass NewGame = new GameClass();
+            GameClass NewGame = new GameClass(); 
             NewGame.RunGame();
+
+         
+
 
           
 
