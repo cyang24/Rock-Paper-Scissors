@@ -34,7 +34,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserGestures.cs" />
     <Compile Include="PlayerClass.cs" />
     <Compile Include="GameClass.cs" />
     <Compile Include="Human.cs" />
