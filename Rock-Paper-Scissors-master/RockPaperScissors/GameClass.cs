@@ -146,10 +146,6 @@ namespace RockPaperScissors
                 player2.SetPlayerScore(player2.playerScore += 1);
                 Console.WriteLine("Geat Win! " + player2.GetPlayerName());
             }
-            else if (playerWin == true && playerWin == false)
-            {
-              Console.WriteLine("It's a Tie! No Winners");
-            }
         }
 
 
