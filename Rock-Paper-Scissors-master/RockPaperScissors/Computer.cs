@@ -7,7 +7,6 @@ namespace RockPaperScissors
     {
         Random random = new Random();
 
-
         public override void MainMenu()
         {
             List<string> gestures = new List<string>();

@@ -14,7 +14,7 @@ namespace RockPaperScissors
         public string player2GestureInput;
         public string gestureInput;
         public bool playerWin;
-        public bool playAgain = true;
+        public bool playGame = true;
        
         // NumberOfPlayers
 
@@ -61,19 +61,16 @@ namespace RockPaperScissors
 
         // Player Turns 1) rock, 2) paper, 3) scissors, 4) spock or 5) lizard
 
-
         public void Player1Turn()
         {   
             player1.MainMenu();
             player1GestureInput = player1.GetGestureInput();
-            //player1.GetGestureInput();
         }
 
         public void Player2Turn()
         {   
             player2.MainMenu();
             player2GestureInput = player2.GetGestureInput();
-            //player2.GetGestureInput();
         }
 
         //Game Results
@@ -156,18 +153,17 @@ namespace RockPaperScissors
         }
 
 
-        //Play Again
-        public void PlayAgain()
+        //Plays Game (Master Method)
+        public void PlayGame()
         {
-            do
+            while (playGame)
             {
-                Console.WriteLine("\n");
-                Console.WriteLine("Play Again? Y or N");
-                string userChoice = Console.ReadLine().ToUpper();
                 RunGame();
-
-            } 
-            while (Console.ReadLine() == "Y");
+                Console.WriteLine("\n");
+                Console.WriteLine("Would you like to play again? Y or N");
+                ConsoleKeyInfo cki = Console.ReadKey(); 
+                playGame = cki.KeyChar == 'y';
+            }
         }
 
         // Runs Game
@@ -191,8 +187,8 @@ namespace RockPaperScissors
                 GesturesConditions(player1GestureInput, player2GestureInput);
                 Console.WriteLine("\n");
 
-                Console.WriteLine("Current Score " + player1.GetPlayerName() + " is " + player1.GetPlayerScore());
-                Console.WriteLine("Current Score " + player2.GetPlayerName() + " is " + player2.GetPlayerScore());
+                Console.WriteLine("Current Score " + player1.GetPlayerName() + ": " + player1.GetPlayerScore());
+                Console.WriteLine("Current Score " + player2.GetPlayerName() + ": " + player2.GetPlayerScore());
                 Console.WriteLine("\n");
 
             }
@@ -206,10 +202,7 @@ namespace RockPaperScissors
             else if (player2.GetPlayerScore() == 3)
             {
                 Console.WriteLine(player2.GetPlayerName() + " takes the set!! Great Win!");
-
             }
-
-            PlayAgain();
         }
     }
 }

@@ -74,9 +74,6 @@ namespace RockPaperScissors
         {
             return gestureInput;
         }
-
-
-
     }
 
   }  
