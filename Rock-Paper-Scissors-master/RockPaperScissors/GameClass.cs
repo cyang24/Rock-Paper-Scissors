@@ -159,6 +159,7 @@ namespace RockPaperScissors
                 Console.WriteLine("Would you like to play again? Y or N");
                 ConsoleKeyInfo cki = Console.ReadKey(); 
                 playGame = cki.KeyChar == 'y';
+                Console.WriteLine("\n");
             }
         }
 
