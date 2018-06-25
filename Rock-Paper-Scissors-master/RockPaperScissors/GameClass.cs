@@ -9,21 +9,21 @@ namespace RockPaperScissors
 
         public PlayerClass player1;
         public PlayerClass player2;
-        public string playerSelectionInput;
+        public string NumberOfplayerSelection;
         public string player1GestureInput;
         public string player2GestureInput;
         public string gestureInput;
         public bool playerWin;
         public bool playGame = true;
        
-        // NumberOfPlayers
+        // Game Conditions Setup
 
         public void  NumberOfPlayers()
         {
             Console.WriteLine("How many players are playing today?");
-            playerSelectionInput = Console.ReadLine();
+            NumberOfplayerSelection = Console.ReadLine();
 
-            if (playerSelectionInput == "1")
+            if (NumberOfplayerSelection == "1")
             {
                 player1 = new Human();
                 Console.WriteLine("What is your name Player 1?");
@@ -38,7 +38,7 @@ namespace RockPaperScissors
 
             }
 
-            else if (playerSelectionInput == "2")
+            else if (NumberOfplayerSelection == "2")
             {
                 player1 = new Human();
                 Console.WriteLine("What is your name Player 1?");
@@ -59,7 +59,7 @@ namespace RockPaperScissors
             }
         }
 
-        // Player Turns 1) rock, 2) paper, 3) scissors, 4) spock or 5) lizard
+        // Player Turn Gestures
 
         public void Player1Turn()
         {   
@@ -73,7 +73,7 @@ namespace RockPaperScissors
             player2GestureInput = player2.GetGestureInput();
         }
 
-        //Game Results
+        //Game Conditions
 
         public void GesturesConditions(string player1GestureInput, string player2GestureInput)
         {
